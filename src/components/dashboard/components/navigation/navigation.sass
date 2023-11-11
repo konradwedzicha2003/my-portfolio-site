@@ -1,0 +1,68 @@
+@import '../../../../style/variables/variables'
+
+.navigation
+    &__menu-button-lines
+        +flex-center-center
+        width: 100%
+        height: 100%
+        transition: transform 0.4s ease-in-out
+
+        &--active
+            transform: translateX(6px)
+
+    &__menu-button-line
+        position: absolute
+        width: 30px
+        height: 4px
+        background: $c-white
+        border-radius: $s-border-radius-main
+        transition: 0.4s ease-in-out
+
+        &:first-child
+            top: 12px
+            transform-origin: 0 0
+
+        &:nth-child(2)
+            top: 22px
+            transition: 0.3s ease-in-out
+
+        &:nth-child(3)
+            top: 32px
+            transform-origin: 0 100%
+
+        &--active
+            &:first-child
+                transform: rotate(45deg)
+
+            &:nth-child(2)
+                transform: scaleX(0)
+
+            &:nth-child(3)
+                transform: rotate(-45deg)
+    
+    &__menu, &__menu-background
+        position: absolute
+        top: $s-height-top-bar
+        left: 0
+        width: 100%
+        height: calc(100vh - $s-height-top-bar - $s-height-footer)
+
+    &__menu
+        +flex-center-center
+        flex-direction: column
+        transform: translateX(-100vw)
+        opacity: 0
+        transition: 0.5s ease-in-out
+
+        &--active
+            transform: translateX(0)
+            opacity: 1
+
+    &__menu-background
+        z-index: -1
+        transition: background 0.5s linear
+        opacity: 0.5
+        pointer-events: none
+
+        &--active
+            background: $c-secondary

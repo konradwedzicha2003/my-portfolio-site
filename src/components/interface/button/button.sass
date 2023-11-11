@@ -1,0 +1,18 @@
+@import '../../../style/variables/variables'
+    
+.button
+    position: relative
+    border: none
+    cursor: pointer
+
+    &--menu
+        @include flex-center-center
+        width: 48px
+        height: 48px    
+        background: $c-button
+        margin: 12px
+        border-radius: $s-border-radius-main
+        transition: background 0.2s
+        
+        &:hover
+            background: $c-primary

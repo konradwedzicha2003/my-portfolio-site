@@ -1,0 +1,23 @@
+@import '../../../../../../style/variables/variables'
+    
+.navigation-item
+    width: 360px
+    height: $s-height-navigation-item
+    cursor: pointer
+    margin: 30px
+    border-radius: $s-border-radius-round
+    background: $c-button
+    opacity: 1
+    box-shadow: 3px 3px 8px $c-primary
+    transition: transform 0.3s ease-in-out
+
+    &:hover
+        transform: translateY(-10px)
+        background: $c-light-gray
+
+    a
+        +flex-center-center
+        width: 100%
+        height: 100%
+        text-decoration: none
+        color: $c-black

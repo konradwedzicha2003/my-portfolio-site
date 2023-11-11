@@ -1,0 +1,13 @@
+@import '../../style/variables/variables'
+    
+.dashboard
+    position: relative
+    height: 100vh
+
+    &__content
+        padding-bottom: $s-height-footer
+        width: 100%
+        transition: filter 0.5s linear
+
+        &--menu-opened
+            filter: blur(5px)
